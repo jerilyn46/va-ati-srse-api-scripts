@@ -1,0 +1,11 @@
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+# Except this Example file
+!Example.csv
+!scriptDrivers
+!ExampleDriverFile.csv
+!testSuites
+!ExampleTestSuite.csv
+!ScannedPages508Template.xlsx

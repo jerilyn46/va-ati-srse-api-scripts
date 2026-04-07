@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>gov.va.ati.srse</groupId>
+	<artifactId>srse.api</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>logs</directory>
+				<excludes>
+					<exclude>*.log</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+					<!-- <release>11</release> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>gov.va.ati</groupId>
+			<artifactId>seleniumcore</artifactId>
+			<version>3.2.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.va.ati</groupId>
+			<artifactId>platformindependentcore</artifactId>
+			<version>3.2.1-SNAPSHOT</version>
+		</dependency>
+		<!-- UNCOMMENT OUT EITHER PAGES, WINDOWS, or MOBILE DEPENDENCY BELOW AND 
+		UPDATE TO POINT TO THE CORRESOPONDING PROJECT, IF APPLICABLE -->
+		<!-- <dependency>
+			<groupId>gov.va.ati.REPLACE_WITH_LOWER_CASE_PROJECT_NAME</groupId>
+			<artifactId>REPLACE_WITH_LOWER_CASE_PROJECT_NAME.pages</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
+		<!-- <dependency>
+			<groupId>gov.va.ati.REPLACE_WITH_LOWER_CASE_PROJECT_NAME</groupId>
+			<artifactId>REPLACE_WITH_LOWER_CASE_PROJECT_NAME.windows</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
+		<!-- <dependency>
+			<groupId>gov.va.ati.REPLACE_WITH_LOWER_CASE_PROJECT_NAME</groupId>
+			<artifactId>REPLACE_WITH_LOWER_CASE_PROJECT_NAME.mobile</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
+		<!-- UNCOMMENT OUT DEPENDENCY FOR VISTA AUTOMATION SCRIPTS FOR COMMON VISTA OPTIONS -->
+		<!-- <dependency>
+			<groupId>gov.va.ati.vista</groupId>
+			<artifactId>vista.options</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
+	</dependencies>
+</project>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" strict="true"
+	name="LoggingConfig">
+	<Properties>
+		<Property name="log-path">logs/</Property>
+		<Property name="app">PROJECT_NAME_HERE_IN_LOWERCASE</Property>
+		<Property name="filename">${log-path}/${app}.log</Property>
+	</Properties>
+	<Filter type="ThresholdFilter" level="debug" />
+
+	<Appenders>
+		<Appender type="Console" name="STDOUT">
+			<Layout type="PatternLayout" pattern="%d %p %C{1}.%M %m %ex%n" /><!-- 
+				class and method -->
+			<Filters>
+				<Filter type="MarkerFilter" marker="FLOW" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+				<Filter type="MarkerFilter" marker="EXCEPTION" onMatch="DENY"
+					onMismatch="ACCEPT" />
+			</Filters>
+		</Appender>
+		<Appender type="Console" name="FLOW">
+			<Layout type="PatternLayout" pattern="%C{1}.%M %m %ex%n" /><!-- 
+				class and line number -->
+			<Filters>
+				<Filter type="MarkerFilter" marker="FLOW" onMatch="ACCEPT"
+					onMismatch="NEUTRAL" />
+				<Filter type="MarkerFilter" marker="EXCEPTION"
+					onMatch="ACCEPT" onMismatch="DENY" />
+			</Filters>
+		</Appender>
+		<Appender type="File" name="File" fileName="${filename}">
+			<Layout type="PatternLayout">
+				<Pattern>%d %p %C{1.}.%M %m%n</Pattern>
+			</Layout>
+		</Appender>
+	</Appenders>
+
+	<Loggers>
+		<Logger level="ERROR" name="${app}PageClasses">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger level="ERROR" name="platformIndependentCore">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger level="OFF" name="testScripts">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger level="ERROR" name="seleniumCore">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger level="ERROR" name="winiumCore">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger level="ERROR" name="appiumCore">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger level="OFF" name="org.apache.logging">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger level="OFF" name="main">
+			<AppenderRef ref="File" />
+		</Logger>
+		<Logger name="org.apache.logging.log4j" level="OFF"
+			additivity="false">
+			<Filter type="ThreadContextMapFilter">
+				<KeyValuePair key="test" value="123" />
+			</Filter>
+			<AppenderRef ref="STDOUT" />
+		</Logger>
+		<Logger name="TableLogger" level="ERROR">
+             <AppenderRef ref="STDOUT"/>
+        </Logger>
+
+		<Root level="ERROR" additivity="false">
+			<AppenderRef level="DEBUG" ref="STDOUT" />
+		</Root>
+	</Loggers>
+
+</Configuration>

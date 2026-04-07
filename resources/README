@@ -1,0 +1,21 @@
+Overview
+-----------------------------------
+In this directory there is a settings.xml file that will need to be copied 
+into the .m2 directory in the home directory of the logged in user.
+
+For example, C:\Users\YOURUSERNAME\.m2 
+
+Initial Project Setup Instructions
+-----------------------------------
+Please edit the file with your project settings for the desired artifact 
+repository and any needed additional servers for reconciling the dependencies for the project. 
+This will act as a template for new users.
+
+Individual User Instructions
+-----------------------------------
+Each user of the repository will place the file in their C:\Users\YOURUSERNAME\.m2 
+directory and edit to replace the REPLACEWITHUSERNAME and 
+REPLACEWITHAPPROPRIATEPASSWORD and save.
+
+If you have already used the ATI framework with other application, please copy and paste 
+the corresponding new project specific portions into your existing settings.xml file and save

@@ -1,0 +1,13 @@
+NOTE: 
+
+***********************************************************
+NO SENSITIVE DATA should be put into GitHub source control.
+*********************************************************** 
+
+If your test data contains PII you may not want to store ANY of your test data in source control.
+
+It can be hard to manage what files do and don't get put into source control.
+
+Once a file goes into a Pull Request, it lives in the history in source control and special actions
+requiring the assistance of the GitHub team will need to be taken to remove accidentally
+committed / pushed.

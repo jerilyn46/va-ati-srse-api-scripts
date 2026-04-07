@@ -1,0 +1,4 @@
+DATA_ID~SCRIPT_DRIVER_FILE~TEST_EXECUTION~EXECUTION_TIMESTAMP~DEPENDENCIES
+SomeTestId~scriptDrivers\\ExampleDriverFile.csv~RUN~~
+AnotherTestId~scriptDrivers\\ExampleDriverFile.csv~SKIP~~SomeTestId
+FinalTestId~scriptDrivers\\ExampleDriverFile.csv~SKIP~~SomeTestId;AnotherTestId

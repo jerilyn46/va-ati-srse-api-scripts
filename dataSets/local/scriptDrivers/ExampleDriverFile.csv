@@ -1,0 +1,4 @@
+DATA_ID~XRAY_TEST_ID~SCRIPT~{YOUR_SCRIPT_ARG}~{YOUR_SCRIPT_ARG2}
+SomeTestId~~testScripts.executionScripts.testing.SomeTest~~
+AnotherTestId~~testScripts.executionScripts.testing.SomeTest~~
+FinalTestId~~testScripts.executionScripts.testing.SomeTest~~

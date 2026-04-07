@@ -1,0 +1,84 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+	http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<activeProfiles>
+		<activeProfile>nexus</activeProfile>
+	</activeProfiles>
+	<profiles>
+		<profile>
+			<id>nexus</id>
+			<repositories>
+				<repository>
+					<id>nexus-ati-development</id>
+					<url>https://nexus.devops.va.gov/repository/16721-16726-16731-16736-maven-SNAPSHOT/</url>
+				</repository>
+				<repository>
+					<id>nexus-ati-development-release</id>
+					<url>https://nexus.devops.va.gov/repository/16721-16726-16731-16736-maven-RELEASE/</url>
+				</repository>
+				<!-- Uncomment repository below only if you are in GitHub.com and not GHEC-US -->
+				<!-- <repository>
+					<id>nexus-ati-development</id>
+					<url>https://devops.va.gov/dots-nexus/repository/ati-maven-7738582-7743005-7743011-7743018-snapshot/</url>
+				</repository>
+				<repository>
+					<id>nexus-ati-development-release</id>
+					<url>https://devops.va.gov/dots-nexus/repository/ati-maven-7738582-7743005-7743011-7743018-release/</url>
+				</repository> -->
+				<!-- Uncomment repository below only if you are in VAEC GitHub and not GHEC-US -->
+				<!-- <repository>
+					<id>github-ati-development</id>
+					<url>https://github.ec.va.gov/_registry/maven/EPMO/va-ati-development</url>
+				</repository> -->
+				<repository>
+					<id>nexus-REPLACE_WITH_LOWER_CASE_PROJECT_NAME-snapshot</id>
+					<url>https://nexus.devops.va.gov/repository/REPLACE-WITH-NEXUS-REPOSITORY-ID-snapshot/</url>
+				</repository>
+				<repository>
+					<id>nexus-REPLACE_WITH_LOWER_CASE_PROJECT_NAME-release</id>
+					<url>https://nexus.devops.va.gov/repository/REPLACE-WITH-NEXUS-REPOSITORY-ID-release/</url>
+				</repository>
+				<!-- Uncomment repository below only if you are in GitHub.com and not GHEC-US -->
+				<!-- <repository>
+					<id>nexus-REPLACE_WITH_LOWER_CASE_PROJECT_NAME-snapshot</id>
+					<url>https://devops.va.gov/dots-nexus/repository/REPLACE-WITH-NEXUS-REPOSITORY-ID-snapshot/</url>
+				</repository>
+				<repository>
+					<idnexus-REPLACE_WITH_LOWER_CASE_PROJECT_NAME-pages-release</id>
+					<url>https://devops.va.gov/dots-nexus/repository/REPLACE-WITH-NEXUS-REPOSITORY-ID-release/</url>
+				</repository> -->
+				<!-- Uncomment repository below only if you are in VAEC GitHub and not GHEC-US -->
+				<!-- <repository>
+					<id>github-ati-development</id>
+					<url>https://github.ec.va.gov/_registry/maven/EPMO/va-ati-REPLACE_WITH_LOWER_CASE_PROJECT_NAME-pages</url>
+				</repository> -->
+			</repositories>
+		</profile>
+	</profiles>
+	<servers>
+		<server>
+			<id>nexus-ati-development</id>
+			<username>REPLACE_WITH_GITHUB_USERNAME</username>
+			<password>REPLACE_WITH_GITHUB_DEV_TOKEN</password>
+		</server>
+		<server>
+			<id>nexus-ati-development-release</id>
+			<username>REPLACE_WITH_GITHUB_USERNAME</username>
+			<password>REPLACE_WITH_GITHUB_DEV_TOKEN</password>
+		</server>
+		<server>
+			<id>nexus-REPLACE_WITH_LOWER_CASE_PROJECT_NAME-snapshot</id>
+			<username>REPLACE_WITH_GITHUB_USERNAME</username>
+			<password>REPLACE_WITH_GITHUB_DEV_TOKEN</password>
+		</server>
+		<server>
+			<id>nexus-REPLACE_WITH_LOWER_CASE_PROJECT_NAME-release</id>
+			<username>REPLACE_WITH_GITHUB_USERNAME</username>
+			<password>REPLACE_WITH_GITHUB_DEV_TOKEN</password>
+		</server>
+	</servers>
+</settings>
+
+
+
